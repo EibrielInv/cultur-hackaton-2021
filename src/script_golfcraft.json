@@ -1,1 +1,270 @@
-{"series":"Golfcraft Update","serieslog":"In this chat you'll learn how to get started playing Golfcraft.","title":"Golfstory","storylog":"","storyupsell":"","version":"0.2.5","voice":"en-US,Matthew,conversational","use_lang_tag":true,"episodes":[{"id":2,"name":"one","story":[{"id":"231220211","name":"Ash","type":"story","content":["\\raise_golfclub Hello! You look like you might be new here. I'm Arnold. \\raise_golfclub Welcome to Golfcraft!"],"voice":"en-US,Matthew,conversational"},{"id":"231250559","name":"Back","type":"story","content":["\\raise_golfclub Hi, I'm Mickey. Arnold and I used to be famous golfers. Now we get to greet new players here at Golfcraft. \\raise_golfclub"],"voice":"en-US,Joanna,conversational"},{"id":"231355199","name":"Dog","type":"simple","content":["Have you ever played golf before?","Then you've got a head start!","That's too bad. If you were a golfer, you might have an advantage in this game."],"voice":"en-US,Matthew,conversational","save_response":false},{"id":"231444540","name":"Egg","type":"story","content":["Arnold, I beg to differ. We've discussed this before. Remember, Golfcraft isn't like real golf."],"voice":"en-US,Joanna,conversational"},{"id":"231552508","name":"Fox","type":"story","content":["Oh right. I keep forgetting. But it's a game of skill. Isn't that right, Mickey?"],"voice":"en-US,Matthew,conversational"},{"id":"231604086","name":"Gig","type":"story","content":["Yes, it takes practice. \\raise_golfclub "],"voice":"en-US,Joanna,conversational"},{"id":"231719731","name":"Ice","type":"simple","content":["Have you ever played mini-golf?","Excellent!","Really? That's a shame. It's a wonderful family sport. But never mind. "],"voice":"en-US,Joanna,conversational","save_response":false},{"id":"021842166","name":"Chain","type":"story","content":["In Golfcraft the objective is to tap a ball with a club to hit glowing objects on the table. It's a bit like mini-golf."],"voice":"en-US,Joanna,conversational"},{"id":"022034896","name":"Jake","type":"story","content":["Except you're trying to hit the glowing object instead of putting the ball into a hole."],"voice":"en-US,Matthew,conversational"},{"id":"022131803","name":"King","type":"simple","content":["Does that make sense?","I can tell you're a quick learner.","Don't worry. It'll make sense once you try it."],"voice":"en-US,Matthew,conversational","save_response":false},{"id":"022209033","name":"Horse","type":"story","content":["I bet you're wondering what it costs to get started. People are always asking us that. "],"voice":"en-US,Joanna,conversational"},{"id":"022306485","name":"Lash","type":"story","content":["The good news is it doesn't cost anything to get started. And if you develop your skill, you can even win prizes!"],"voice":"en-US,Matthew,conversational"},{"id":"022343491","name":"Mute","type":"simple","content":["Do you like winning free stuff?","Of course you do.","Really? Wow. "],"voice":"en-US,Joanna,conversational","save_response":false},{"id":"022421227","name":"Net","type":"story","content":["Mickey and I would like to see you give Golfcraft a try. Come over here and have a look at the boards. \\goto_training_leaderboard"],"voice":"en-US,Matthew,conversational"},{"id":"023545290","name":"Oak","type":"story","content":["Here's the training leaderboard. It shows the names of the top players who've scored the most during training."],"voice":"en-US,Joanna,conversational"},{"id":"023957644","name":"Page","type":"simple","content":["What do you think friend. Think you can make it onto the leaderboard?","That's the spirit!","Don't sell yourself short. It's all about attitude!"],"voice":"en-US,Matthew,conversational","save_response":false},{"id":"024053507","name":"Quill","type":"story","content":["And here's the training board. \\goto_training_board This is where you come to do your training. Your training sessions will show up on these boards so you can keep track."],"voice":"en-US,Joanna,conversational"},{"id":"024535295","name":"Raft","type":"story","content":["The goal is to complete levels. Come over here and look at the Level board. \\goto_level_board This board is just for you."],"voice":"en-US,Matthew,conversational"},{"id":"024707267","name":"Scout","type":"story","content":["When you complete a level it will show up on this board."],"voice":"en-US,Joanna,conversational"},{"id":"025617904","name":"Tide","type":"story","content":["You're going to have so much fun! I wish I could train, but I'm too old. "],"voice":"en-US,Matthew,conversational"},{"id":"025651018","name":"Use","type":"simple","content":["Are you ready to give it a try?","Great!","I wish you'd try it. It would make me and Mickey very happy."],"voice":"en-US,Matthew,conversational","save_response":false},{"id":"025736516","name":"Vast","type":"story","content":["Come over here to the training board. \\goto_training_board."],"voice":"en-US,Joanna,conversational"},{"id":"025810122","name":"Winch","type":"simple","content":["Do you see where it says Play?","Good. ","It's right there in big bright letters. PLAY."],"voice":"en-US,Joanna,conversational","save_response":false},{"id":"025846682","name":"Xray","type":"story","content":["Just point your cursor at the Play button and click it. Then you'll be on your way. It was great talking to you. Goodluck!"],"voice":"en-US,Joanna,conversational"},{"id":"025927614","name":"Yacht","type":"story","content":["Happy training! We'll be anxious to see how it goes. Good luck!!"],"voice":"en-US,Matthew,conversational"}],"patch_abc_text":"","notes":""}],"variables":{},"storynumber":"2"}
+{
+  "series": "Golfcraft Update",
+  "serieslog": "In this chat you'll learn how to get started playing Golfcraft.",
+  "title": "Golfstory",
+  "storylog": "",
+  "storyupsell": "",
+  "version": "0.2.5",
+  "voice": "en-US,Matthew,conversational",
+  "use_lang_tag": true,
+  "episodes": [
+    {
+      "id": 2,
+      "name": "one",
+      "story": [
+        {
+          "id": "231220211",
+          "name": "Ash",
+          "type": "story",
+          "content": [
+            "\\raise_golfclub Hello! You look like you might be new here. I'm Arnold. \\raise_golfclub Welcome to Golfcraft!"
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "231250559",
+          "name": "Back",
+          "type": "story",
+          "content": [
+            "\\raise_golfclub Hi, I'm Mickey. Arnold and I used to be famous golfers. Now we get to greet new players here at Golfcraft. \\raise_golfclub"
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "231355199",
+          "name": "Dog",
+          "type": "simple",
+          "content": [
+            "Have you ever played golf before?",
+            "Then you've got a head start!",
+            "That's too bad. If you were a golfer, you might have an advantage in this game."
+          ],
+          "voice": "en-US,Matthew,conversational",
+          "save_response": false
+        },
+        {
+          "id": "231444540",
+          "name": "Egg",
+          "type": "story",
+          "content": [
+            "Arnold, I beg to differ. We've discussed this before. Remember, Golfcraft isn't like real golf."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "231552508",
+          "name": "Fox",
+          "type": "story",
+          "content": [
+            "Oh right. I keep forgetting. But it's a game of skill. Isn't that right, Mickey?"
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "231604086",
+          "name": "Gig",
+          "type": "story",
+          "content": [
+            "Yes, it takes practice. \\raise_golfclub "
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "231719731",
+          "name": "Ice",
+          "type": "simple",
+          "content": [
+            "Have you ever played mini-golf?",
+            "Excellent!",
+            "Really? That's a shame. It's a wonderful family sport. But never mind. "
+          ],
+          "voice": "en-US,Joanna,conversational",
+          "save_response": false
+        },
+        {
+          "id": "021842166",
+          "name": "Chain",
+          "type": "story",
+          "content": [
+            "In Golfcraft the objective is to tap a ball with a club to hit glowing objects on the table. It's a bit like mini-golf."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "022034896",
+          "name": "Jake",
+          "type": "story",
+          "content": [
+            "Except you're trying to hit the glowing object instead of putting the ball into a hole."
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "022131803",
+          "name": "King",
+          "type": "simple",
+          "content": [
+            "Does that make sense?",
+            "I can tell you're a quick learner.",
+            "Don't worry. It'll make sense once you try it."
+          ],
+          "voice": "en-US,Matthew,conversational",
+          "save_response": false
+        },
+        {
+          "id": "022209033",
+          "name": "Horse",
+          "type": "story",
+          "content": [
+            "I bet you're wondering what it costs to get started. People are always asking us that. "
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "022306485",
+          "name": "Lash",
+          "type": "story",
+          "content": [
+            "The good news is it doesn't cost anything to get started. And if you develop your skill, you can even win prizes!"
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "022343491",
+          "name": "Mute",
+          "type": "simple",
+          "content": [
+            "Do you like winning free stuff?",
+            "Of course you do.",
+            "Really? Wow. "
+          ],
+          "voice": "en-US,Joanna,conversational",
+          "save_response": false
+        },
+        {
+          "id": "022421227",
+          "name": "Net",
+          "type": "story",
+          "content": [
+            "Mickey and I would like to see you give Golfcraft a try. Come over here and have a look at the boards. \\goto_training_leaderboard"
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "023545290",
+          "name": "Oak",
+          "type": "story",
+          "content": [
+            "Here's the training leaderboard. It shows the names of the top players who've scored the most during training."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "023957644",
+          "name": "Page",
+          "type": "simple",
+          "content": [
+            "What do you think friend. Think you can make it onto the leaderboard?",
+            "That's the spirit!",
+            "Don't sell yourself short. It's all about attitude!"
+          ],
+          "voice": "en-US,Matthew,conversational",
+          "save_response": false
+        },
+        {
+          "id": "024053507",
+          "name": "Quill",
+          "type": "story",
+          "content": [
+            "And here's the training board. \\goto_training_board This is where you come to do your training. Your training sessions will show up on these boards so you can keep track."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "024535295",
+          "name": "Raft",
+          "type": "story",
+          "content": [
+            "The goal is to complete levels. Come over here and look at the Level board. \\goto_level_board This board is just for you."
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "024707267",
+          "name": "Scout",
+          "type": "story",
+          "content": [
+            "When you complete a level it will show up on this board."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "025617904",
+          "name": "Tide",
+          "type": "story",
+          "content": [
+            "You're going to have so much fun! I wish I could train, but I'm too old. "
+          ],
+          "voice": "en-US,Matthew,conversational"
+        },
+        {
+          "id": "025651018",
+          "name": "Use",
+          "type": "simple",
+          "content": [
+            "Are you ready to give it a try?",
+            "Great!",
+            "I wish you'd try it. It would make me and Mickey very happy."
+          ],
+          "voice": "en-US,Matthew,conversational",
+          "save_response": false
+        },
+        {
+          "id": "025736516",
+          "name": "Vast",
+          "type": "story",
+          "content": [
+            "Come over here to the training board. \\goto_training_board."
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "025810122",
+          "name": "Winch",
+          "type": "simple",
+          "content": [
+            "Do you see where it says Play?",
+            "Good. ",
+            "It's right there in big bright letters. PLAY."
+          ],
+          "voice": "en-US,Joanna,conversational",
+          "save_response": false
+        },
+        {
+          "id": "025846682",
+          "name": "Xray",
+          "type": "story",
+          "content": [
+            "Just point your cursor at the Play button and click it. Then you'll be on your way. It was great talking to you. Goodluck!"
+          ],
+          "voice": "en-US,Joanna,conversational"
+        },
+        {
+          "id": "025927614",
+          "name": "Yacht",
+          "type": "story",
+          "content": [
+            "Happy training! We'll be anxious to see how it goes. Good luck!!"
+          ],
+          "voice": "en-US,Matthew,conversational"
+        }
+      ],
+      "patch_abc_text": "",
+      "notes": ""
+    }
+  ],
+  "variables": {
+
+  },
+  "storynumber": "2"
+}

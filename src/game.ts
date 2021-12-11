@@ -44,9 +44,25 @@ engine.addEntity(cube)
 export let myNPC_A = new NPC({ position: new Vector3(10, 1.5, 8) }, 'models/bela.glb', () => {
 }, {faceUser: true, idleAnim: `Idle`})
 
+const nt = new Transform({
+    position: new Vector3(0, 0.7, 0),
+    rotation: Quaternion.Euler(0, 180, 0),
+    scale: new Vector3(0.35, 0.35, 0.35)
+})
+
+const myNPC_A_Name = new Entity()
+myNPC_A_Name.addComponent(new TextShape("Mickey"))
+myNPC_A_Name.addComponent(nt)
+myNPC_A_Name.setParent(myNPC_A)
+
 export let myNPC = new NPC({ position: new Vector3(10, 1.5, 10) }, 'models/alice.glb', () => {
     myNPC.talk(ILoveCats, 0)
-}, {faceUser: true, idleAnim: `Idle`})
+}, {faceUser: true, idleAnim: `Hello`})
+
+const myNPC_Name = new Entity()
+myNPC_Name.addComponent(new TextShape("Arnold"))
+myNPC_Name.addComponent(nt)
+myNPC_Name.setParent(myNPC)
 
 export let ILoveCats: Dialog[] = []
 
@@ -80,34 +96,19 @@ function loadScript(script: any) {
         const character_other_npc = characters[characters[character_id].other].npc
 
         if (script.episodes[0].story[n].type == "story") {
+            const data = getDataFrom(script, script.episodes[0].story[n].id, 0)
             ILoveCats.push({
-                text: character_name + ": " + script.episodes[0].story[n].content[0],
+                text: character_name + ": " + data.text,
                 name: script.episodes[0].story[n].id,
                 triggeredByNext: () => {
                     myNPC.playAnimation(`Idle`)
                     myNPC_A.playAnimation(`Idle`)
-                    character_other_npc.playAnimation(`Talk`)
-                    if (n==3) {
-                        myNPC.followPath({
-                            path: [new Vector3(2, 1.5, 2), new Vector3(2, 1.5, 4), new Vector3(6, 1.5, 2)],
-                            totalDuration: 4,
-                            loop: false,
-                            curve: true,
-                            startingPoint: 0,
-                            onFinishCallback: () => {
-                                log('Finished!')
-                            }
-                        })
-                        myNPC_A.followPath({
-                            path: [new Vector3(2, 1.5, 2), new Vector3(3, 1.5, 4), new Vector3(7, 1.5, 2)],
-                            totalDuration: 4,
-                            loop: false,
-                            curve: true,
-                            startingPoint: 0,
-                            onFinishCallback: () => {
-                                log('Finished!')
-                            }
-                        })
+
+                    const data = getDataFrom(script, script.episodes[0].story[n+1].id, 0)
+                    if (data.action == "raise_golfclub") {
+                        data.npc.playAnimation(`Hello`)
+                    } else {
+                        data.npc.playAnimation(`Talk`)
                     }
                 }
             })
@@ -149,4 +150,64 @@ function loadScript(script: any) {
         }
     }
     ILoveCats[ILoveCats.length-1].isEndOfDialog = true
+}
+
+
+function gotoPlace() {
+    myNPC.followPath({
+        path: [new Vector3(2, 1.5, 2), new Vector3(2, 1.5, 4), new Vector3(6, 1.5, 2)],
+        totalDuration: 4,
+        loop: false,
+        curve: true,
+        startingPoint: 0,
+        onFinishCallback: () => {
+            log('Finished!')
+        }
+    })
+    myNPC_A.followPath({
+        path: [new Vector3(2, 1.5, 2), new Vector3(3, 1.5, 4), new Vector3(7, 1.5, 2)],
+        totalDuration: 4,
+        loop: false,
+        curve: true,
+        startingPoint: 0,
+        onFinishCallback: () => {
+            log('Finished!')
+        }
+    })
+}
+
+function getDataFrom(script: any, id: string, cid: number = 0) {
+    let data =  {
+        "npc": myNPC,
+        "action": "",
+        "text": ""
+    }
+    for (let n=0; n < script.episodes[0].story.length; n++) {
+        if (script.episodes[0].story[n].id == id) {
+
+            let text = ""+script.episodes[0].story[n].content[cid]
+            const original_text = ""+text
+            text = text.replace(/\\raise_golfclub/g, "")
+            text = text.replace(/\\goto_training_leaderboard/g, "")
+            text = text.replace(/\\goto_training_board/g, "")
+            text = text.replace(/\\goto_level_board/g, "")
+
+            if (original_text.indexOf('\\raise_golfclub') !== -1) {
+                data.action = "raise_golfclub"
+            } else if (original_text.indexOf('\\goto_training_leaderboard') !== -1) {
+                data.action = "goto_training_leaderboard"
+            } else if (original_text.indexOf('\\goto_training_board') !== -1) {
+                data.action = "goto_training_board"
+            } else if (original_text.indexOf('\\goto_level_board') !== -1) {
+                data.action = "goto_level_board"
+            }
+
+            const character_id = script.episodes[0].story[n].voice.split(",")[1]
+            data.npc =  characters[character_id].npc
+            data.text = text
+
+            break
+        }
+    }
+    return data
 }
