@@ -1,0 +1,323 @@
+{
+    "asset" : {
+        "copyright" : "Eibriel",
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Pirate_Hat",
+            "translation" : [
+                0,
+                1.7903940677642822,
+                0.06326023489236832
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "Pirate_Body"
+        },
+        {
+            "mesh" : 2,
+            "name" : "Pirate_Gun",
+            "rotation" : [
+                0.5568803548812866,
+                0.8233640193939209,
+                -0.058764342218637466,
+                -0.09221013635396957
+            ],
+            "translation" : [
+                0.005111131817102432,
+                1.0901988744735718,
+                0.18111595511436462
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "alphaCutoff" : 0.5,
+            "alphaMode" : "MASK",
+            "doubleSided" : true,
+            "name" : "Pirate",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Pirate_Hat",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Pirate_Body",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6,
+                        "COLOR_0" : 7
+                    },
+                    "indices" : 8,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "Pirate_Gun",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 9,
+                        "NORMAL" : 10,
+                        "TEXCOORD_0" : 11,
+                        "COLOR_0" : 12
+                    },
+                    "indices" : 13,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Pirate",
+            "uri" : "textures/Pirate.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 169,
+            "max" : [
+                0.29986971616744995,
+                0.2318871021270752,
+                0.23961248993873596
+            ],
+            "min" : [
+                -0.23841553926467896,
+                -0.08488166332244873,
+                -0.24420416355133057
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 169,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 169,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 696,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 4250,
+            "max" : [
+                0.856014609336853,
+                1.9335747957229614,
+                0.24588482081890106
+            ],
+            "min" : [
+                -0.856014609336853,
+                0.00046665736590512097,
+                -0.25670263171195984
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 4250,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4250,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 4250,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5123,
+            "count" : 15450,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 1108,
+            "max" : [
+                0.059056345373392105,
+                0.09762397408485413,
+                0.017957687377929688
+            ],
+            "min" : [
+                -0.35455620288848877,
+                -0.0773540809750557,
+                -0.017308298498392105
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 1108,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5126,
+            "count" : 1108,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5123,
+            "count" : 1108,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5123,
+            "count" : 3372,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 2028,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2028,
+            "byteOffset" : 2028
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1352,
+            "byteOffset" : 4056
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1392,
+            "byteOffset" : 5408
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 51000,
+            "byteOffset" : 6800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 51000,
+            "byteOffset" : 57800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 34000,
+            "byteOffset" : 108800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 34000,
+            "byteOffset" : 142800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 30900,
+            "byteOffset" : 176800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13296,
+            "byteOffset" : 207700
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13296,
+            "byteOffset" : 220996
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8864,
+            "byteOffset" : 234292
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8864,
+            "byteOffset" : 243156
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6744,
+            "byteOffset" : 252020
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 258764,
+            "uri" : "captain.bin"
+        }
+    ]
+}

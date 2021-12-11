@@ -1,0 +1,40 @@
+{
+  "display": {
+    "title": "Expresso test",
+    "description": "My new Decentraland project",
+    "navmapThumbnail": "images/scene-thumbnail.png",
+    "favicon": "favicon_asset"
+  },
+  "contact": {
+    "name": "Eibriel",
+    "email": ""
+  },
+  "owner": "",
+  "scene": {
+    "parcels": [
+      "-31,19",
+      "-31,20"
+    ],
+    "base": "-31,20"
+  },
+  "requiredPermissions": [],
+  "main": "bin/game.js",
+  "tags": [],
+  "spawnPoints": [
+    {
+      "name": "spawn1",
+      "default": true,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "cameraTarget": {
+        "x": 8,
+        "y": 1,
+        "z": 8
+      }
+    }
+  ],
+  "featureToggles": {}
+}
