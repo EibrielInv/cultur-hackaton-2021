@@ -1,6 +1,4 @@
 import { NPC, Dialog, TrackUserFlag } from '@dcl/npc-scene-utils'
-//import { script } from 'script'
-// https://bafybeiehmsgzo7khxwa5cslo7bqihpzjbpgr4r426pb2gmnibqt2ncqvkm.ipfs.dweb.link/script_golfcraft.json
 
 const canvas = new UICanvas()
 
@@ -58,7 +56,8 @@ let myNPC_A = new NPC(initial_positions["npc_a"], 'models/bela.glb', initiateTal
         faceUser: true,
         idleAnim: `Idle`,
         onlyClickTrigger: true,
-        onWalkAway: endTalk
+        onWalkAway: endTalk,
+        reactDistance: 20
     }
 )
 myNPC_A.getComponent(TrackUserFlag).active = true
@@ -66,11 +65,15 @@ myNPC_A.getComponent(TrackUserFlag).active = true
 const nt = new Transform({
     position: new Vector3(0, 0.7, 0),
     rotation: Quaternion.Euler(0, 180, 0),
-    scale: new Vector3(0.35, 0.35, 0.35)
+    scale: new Vector3(0.2, 0.2, 0.2)
 })
 
 const myNPC_A_Name = new Entity()
-myNPC_A_Name.addComponent(new TextShape("Mickey"))
+const myNPC_A_textshape = new TextShape("Mickey")
+myNPC_A_textshape.color = Color3.Blue()
+myNPC_A_textshape.outlineColor = Color3.White()
+myNPC_A_textshape.outlineWidth = 0.1
+myNPC_A_Name.addComponent(myNPC_A_textshape)
 myNPC_A_Name.addComponent(nt)
 myNPC_A_Name.setParent(myNPC_A)
 
@@ -79,13 +82,18 @@ let myNPC = new NPC(initial_positions["npc"], 'models/alice.glb', initiateTalk,
         faceUser: true,
         idleAnim: `Idle`,
         onlyClickTrigger: true,
-        onWalkAway: endTalk
+        onWalkAway: endTalk,
+        reactDistance: 20
     }
 )
 myNPC.getComponent(TrackUserFlag).active = true
 
 const myNPC_Name = new Entity()
-myNPC_Name.addComponent(new TextShape("Arnold"))
+const myNPC_textshape = new TextShape("Arnold")
+myNPC_textshape.color = Color3.Blue()
+myNPC_textshape.outlineColor = Color3.White()
+myNPC_textshape.outlineWidth = 0.1
+myNPC_Name.addComponent(myNPC_textshape)
 myNPC_Name.addComponent(nt)
 myNPC_Name.setParent(myNPC)
 
@@ -223,22 +231,24 @@ function gotoPlace(place: string) {
     const npc_position = myNPC.getComponent(Transform).position
     const npc_a_position = myNPC_A.getComponent(Transform).position
 
+    const small_vector = new Vector3(0.001, 0, 0.001)
+
     const paths: any = {
         start: {
-            npc_a: [npc_a_position, initial_positions.npc_a.position],
-            npc: [npc_position, initial_positions.npc.position]
+            npc_a: [npc_a_position.add(small_vector), initial_positions.npc_a.position],
+            npc: [npc_position.add(small_vector), initial_positions.npc.position]
         },
         training_leaderboard: {
-            npc_a: [npc_a_position, new Vector3(7, 1.5, 2)],
-            npc: [npc_position, new Vector3(6, 1.5, 2)]
+            npc_a: [npc_a_position.add(small_vector), new Vector3(7, 1.5, 2)],
+            npc: [npc_position.add(small_vector), new Vector3(6, 1.5, 2)]
         },
         training_board: {
-            npc_a: [npc_a_position, new Vector3(3, 1.5, 4)],
-            npc: [npc_position, new Vector3(2, 1.5, 4)]
+            npc_a: [npc_a_position.add(small_vector), new Vector3(8, 1.5, 14)],
+            npc: [npc_position.add(small_vector), new Vector3(6, 1.5, 11)]
         },
         level_board: {
-            npc_a: [npc_a_position, new Vector3(3, 1.5, 2)],
-            npc: [npc_position, new Vector3(2.5, 1.5, 2)]
+            npc_a: [npc_a_position.add(small_vector), new Vector3(13, 1.5, 14)],
+            npc: [npc_position.add(small_vector), new Vector3(15, 1.5, 14)]
         },
     }
 
@@ -248,7 +258,7 @@ function gotoPlace(place: string) {
 
     myNPC.followPath({
         path: paths[place].npc,
-        totalDuration: 4,
+        totalDuration: 2,
         loop: false,
         curve: true,
         startingPoint: 0,
@@ -258,7 +268,7 @@ function gotoPlace(place: string) {
     })
     myNPC_A.followPath({
         path: paths[place].npc_a,
-        totalDuration: 4,
+        totalDuration: 2,
         loop: false,
         curve: true,
         startingPoint: 0,
